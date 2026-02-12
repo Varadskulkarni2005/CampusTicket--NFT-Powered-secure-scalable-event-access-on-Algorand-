@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Event Ticketing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Campus Ticket</div>
+    <button class="nav-btn" onclick="connectWallet()">Connect Wallet</button>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="glass-card">
+        <h1>Event Access</h1>
+        <p class="subtitle">Secure, verifiable ticketing on the Algorand blockchain.</p>
+
+        <div class="button-group">
+          <button class="primary" onclick="buyTicket()">Purchase Ticket</button>
+          <button class="secondary" onclick="verifyTicket()">Verify Entry</button>
+        </div>
+
+        <div id="status">Wallet not connected</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Campus Ticketing System. Built on Algorand.
+  </footer>
+
+  <script src="https://unpkg.com/@perawallet/connect/dist/index.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

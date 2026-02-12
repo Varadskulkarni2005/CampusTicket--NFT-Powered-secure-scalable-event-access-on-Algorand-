@@ -1,0 +1,177 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(148, 163, 184, 0.1);
+    --blur-amount: 12px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(15, 23, 42, 1) 0px, transparent 50%);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(var(--blur-amount));
+    -webkit-backdrop-filter: blur(var(--blur-amount));
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.025em;
+    color: #fff;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    /* Increased padding */
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    /* Increased max-width */
+}
+
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--blur-amount));
+    -webkit-backdrop-filter: blur(var(--blur-amount));
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    /* Increased radius */
+    padding: 4rem 3rem;
+    /* Increased padding */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* Increased font size */
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--text-main);
+    letter-spacing: -0.025em;
+}
+
+p.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    /* Increased font size */
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* Form Elements */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* Increased gap */
+}
+
+button.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    /* Increased padding */
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+}
+
+button.primary:hover {
+    background-color: var(--primary-hover);
+}
+
+button.secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 1rem 2rem;
+    /* Increased padding */
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    /* Increased font size */
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button.secondary:hover {
+    border-color: var(--text-muted);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Status */
+#status {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+}
